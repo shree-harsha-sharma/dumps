@@ -1,0 +1,195 @@
+{
+  "Activity": {
+    "@mc:Ignorable": "sap sap2010",
+    "@x:Class": "Main",
+    "@mva:VisualBasic.Settings": "{x:Null}",
+    "@sap:VirtualizedContainerService.HintSize": "868,691",
+    "@sap2010:WorkflowViewState.IdRef": "ActivityBuilder_1",
+    "@xmlns": "http://schemas.microsoft.com/netfx/2009/xaml/activities",
+    "@xmlns:mc": "http://schemas.openxmlformats.org/markup-compatibility/2006",
+    "@xmlns:mva": "clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities",
+    "@xmlns:sap": "http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation",
+    "@xmlns:sap2010": "http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation",
+    "@xmlns:scg": "clr-namespace:System.Collections.Generic;assembly=mscorlib",
+    "@xmlns:ui": "http://schemas.uipath.com/workflow/activities",
+    "@xmlns:x": "http://schemas.microsoft.com/winfx/2006/xaml",
+    "TextExpression.NamespacesForImplementation": {
+      "scg:List": {
+        "@x:TypeArguments": "x:String",
+        "@Capacity": "52",
+        "x:String": [
+          "System.Activities",
+          "System.Activities.Statements",
+          "System.Activities.Expressions",
+          "System.Activities.Validation",
+          "System.Activities.XamlIntegration",
+          "Microsoft.VisualBasic",
+          "Microsoft.VisualBasic.Activities",
+          "System",
+          "System.Collections",
+          "System.Collections.Generic",
+          "System.Data",
+          "System.Diagnostics",
+          "System.Drawing",
+          "System.IO",
+          "System.Linq",
+          "System.Net.Mail",
+          "System.Xml",
+          "System.Xml.Linq",
+          "UiPath.Core",
+          "UiPath.Core.Activities",
+          "System.Windows.Markup",
+          "System.Activities.DynamicUpdate",
+          "UiPath.Platform.ObjectLibrary",
+          "UiPath.UIAutomationNext.Enums",
+          "System.Reflection",
+          "System.Runtime.InteropServices",
+          "System.Collections.ObjectModel"
+        ]
+      }
+    },
+    "TextExpression.ReferencesForImplementation": {
+      "scg:List": {
+        "@x:TypeArguments": "AssemblyReference",
+        "@Capacity": "18",
+        "AssemblyReference": [
+          "System.Activities",
+          "Microsoft.VisualBasic",
+          "mscorlib",
+          "System.Data",
+          "System",
+          "System.Drawing",
+          "System.Core",
+          "System.Xml",
+          "System.Xml.Linq",
+          "PresentationFramework",
+          "WindowsBase",
+          "PresentationCore",
+          "System.Xaml",
+          "UiPath.System.Activities",
+          "UiPath.UiAutomation.Activities",
+          "UiPath.Platform",
+          "UiPath.System.Activities.Design",
+          "UiPath.UIAutomationNext"
+        ]
+      }
+    },
+    "Sequence": {
+      "@sap:VirtualizedContainerService.HintSize": "139,626",
+      "@sap2010:WorkflowViewState.IdRef": "Sequence_2",
+      "Sequence.Variables": {
+        "Variable": [
+          {
+            "@x:TypeArguments": "x:String",
+            "@Default": "[new Uri(System.IO.Path.Combine(Environment.CurrentDirectory, \"unicornGenerator.html\"), true).AbsoluteUri]",
+            "@Name": "unicornGeneratorURL"
+          },
+          {
+            "@x:TypeArguments": "x:Int32",
+            "@Name": "a"
+          },
+          {
+            "@x:TypeArguments": "x:Int32",
+            "@Name": "b"
+          }
+        ]
+      },
+      "sap:WorkflowViewStateService.ViewState": {
+        "scg:Dictionary": {
+          "@x:TypeArguments": "x:String, x:Object",
+          "x:Boolean": {
+            "@x:Key": "IsExpanded",
+            "#text": "True"
+          }
+        }
+      },
+      "Assign": [
+        {
+          "@sap:VirtualizedContainerService.HintSize": "297,60",
+          "@sap2010:WorkflowViewState.IdRef": "Assign_1",
+          "Assign.To": {
+            "OutArgument": {
+              "@x:TypeArguments": "x:Int32",
+              "#text": "[a]"
+            }
+          },
+          "Assign.Value": {
+            "InArgument": {
+              "@x:TypeArguments": "x:Int32",
+              "#text": "5"
+            }
+          }
+        },
+        {
+          "@sap:VirtualizedContainerService.HintSize": "397,60",
+          "@sap2010:WorkflowViewState.IdRef": "Assign_2",
+          "Assign.To": {
+            "OutArgument": {
+              "@x:TypeArguments": "x:Int32",
+              "#text": "[b]"
+            }
+          },
+          "Assign.Value": {
+            "InArgument": {
+              "@x:TypeArguments": "x:Int32",
+              "#text": "6"
+            }
+          }
+        }
+      ],
+      "If": {
+        "@Condition": "[a=b]",
+        "@sap:VirtualizedContainerService.HintSize": "797,334",
+        "@sap2010:WorkflowViewState.IdRef": "If_1",
+        "If.Then": {
+          "Sequence": {
+            "@sap:VirtualizedContainerService.HintSize": "476,176",
+            "@sap2010:WorkflowViewState.IdRef": "Sequence_3",
+            "sap:WorkflowViewStateService.ViewState": {
+              "scg:Dictionary": {
+                "@x:TypeArguments": "x:String, x:Object",
+                "x:Boolean": {
+                  "@x:Key": "IsExpanded",
+                  "#text": "True"
+                }
+              }
+            },
+            "ui:MessageBox": {
+              "@Caption": "{x:Null}",
+              "@ChosenButton": "{x:Null}",
+              "@AutoCloseAfter": "00:00:00",
+              "@DisplayName": "Message Box",
+              "@sap:VirtualizedContainerService.HintSize": "334,84",
+              "@sap2010:WorkflowViewState.IdRef": "MessageBox_1",
+              "@Text": "[\" Hi Hello\"]"
+            }
+          }
+        },
+        "If.Else": {
+          "Sequence": {
+            "@sap:VirtualizedContainerService.HintSize": "576,176",
+            "@sap2010:WorkflowViewState.IdRef": "Sequence_4",
+            "sap:WorkflowViewStateService.ViewState": {
+              "scg:Dictionary": {
+                "@x:TypeArguments": "x:String, x:Object",
+                "x:Boolean": {
+                  "@x:Key": "IsExpanded",
+                  "#text": "True"
+                }
+              }
+            },
+            "ui:MessageBox": {
+              "@Caption": "{x:Null}",
+              "@ChosenButton": "{x:Null}",
+              "@AutoCloseAfter": "00:00:00",
+              "@DisplayName": "Message Box",
+              "@sap:VirtualizedContainerService.HintSize": "334,84",
+              "@sap2010:WorkflowViewState.IdRef": "MessageBox_2",
+              "@Text": "[\"Good Morning\"]"
+            }
+          }
+        }
+      }
+    }
+  }
+}
