@@ -1,0 +1,53 @@
+﻿<process name="sample" version="1.0" bpversion="7.1.2.3518" narrative="sample process for learning" byrefcollection="true" preferredid="d0d3319f-f597-44d4-9c53-f4e0ca828160">
+  <view>
+    <camerax>0</camerax>
+    <cameray>-21</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="c843eed2-760b-4970-8803-e2428cba719b" name="Start" type="Start">
+    <display x="15" y="-105" />
+    <onsuccess>5b969402-5c16-4ce3-a30d-f0c02b230f60</onsuccess>
+  </stage>
+  <stage stageid="f58c2f15-001b-478b-a2e7-2998cdf91896" name="End" type="End">
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="2be43c0b-b86b-448d-8daa-875e14a5b012" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="a754f2b2-1be1-4243-9ddc-3576cb849aaa" name="a" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-225" y="0" />
+    <datatype>number</datatype>
+    <initialvalue>6</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="76e9aedc-29ba-407e-851b-bb82458fe8ff" name="b" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-150" y="0" />
+    <datatype>number</datatype>
+    <initialvalue>6</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5b969402-5c16-4ce3-a30d-f0c02b230f60" name="Decision1" type="Decision">
+    <display x="15" y="-45" />
+    <decision expression="[a]=[b]" />
+    <ontrue>bff8e06a-ebd0-4648-a21a-3c2c47c198ba</ontrue>
+    <onfalse>205eaf69-a3db-430b-8a42-ae8e07e58b5b</onfalse>
+  </stage>
+  <stage stageid="bff8e06a-ebd0-4648-a21a-3c2c47c198ba" name="Alert1" type="Alert">
+    <loginhibit onsuccess="true" />
+    <display x="-75" y="15" />
+    <onsuccess>f58c2f15-001b-478b-a2e7-2998cdf91896</onsuccess>
+    <alert expression="&quot;Hi hello&quot;" />
+  </stage>
+  <stage stageid="205eaf69-a3db-430b-8a42-ae8e07e58b5b" name="Alert2" type="Alert">
+    <loginhibit onsuccess="true" />
+    <display x="90" y="15" />
+    <onsuccess>f58c2f15-001b-478b-a2e7-2998cdf91896</onsuccess>
+    <alert expression="&quot;good morning&quot;" />
+  </stage>
+</process>
